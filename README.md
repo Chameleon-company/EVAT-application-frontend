@@ -11,11 +11,10 @@ First, you will need to start **Metro**, the JavaScript _bundler_ that ships _wi
 To start Metro, run the following command from the _root_ of your React Native project:
 
 ```bash
-# using npm
-npm start
+# using npx
+cd android
 
-# OR using Yarn
-yarn start
+./gradlew clean 
 ```
 
 ## Step 2: Start your Application
@@ -25,22 +24,13 @@ Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _roo
 ### For Android
 
 ```bash
-# using npm
-npm run android
+# using npx
+npx react-native start
+select a for android while running your on your android emulator at the background with a virtual device 
 
-# OR using Yarn
-yarn android
 ```
 
-### For iOS
 
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
 
 If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
