@@ -7,6 +7,7 @@ import MapScreen from './components/MapScreen';
 import TripPlannerScreen from './components/TripPlannerScreen';
 import SaveScreen from './components/SaveScreen';
 import MeScreen from './components/MeScreen';
+import EditProfileScreen from './components/EditProfileScreen';
 import 'react-native-get-random-values';
 
 const Stack = createNativeStackNavigator();
@@ -16,6 +17,7 @@ const routes = [
   {name: 'TripPlanner', component: TripPlannerScreen},
   {name: 'Save', component: SaveScreen},
   {name: 'Me', component: MeScreen},
+  {name: 'EditProfile', component: EditProfileScreen},
 ];
 
 const App = () => {
