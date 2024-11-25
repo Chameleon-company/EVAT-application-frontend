@@ -1,112 +1,233 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
 
-const MeScreen = ({ navigation }) => {
+const ProfileScreen = () => {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <View style={styles.container}>
       {/* Profile Section */}
-      <View style={styles.profileSection}>
+      <View style={styles.header}>
         <Image
-          source={{ uri: 'https://via.placeholder.com/100' }}
           style={styles.profileImage}
+          source={{ uri: 'https://via.placeholder.com/70' }} // Replace with profile image URL
         />
-        <Text style={styles.userName}>John Doe</Text>
-        <Text style={styles.email}>johndoe@example.com</Text>
-      </View>
-
-      {/* Account Settings */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Account Settings</Text>
-        <TouchableOpacity style={styles.option}
-          onPress={() => navigation.navigate('EditProfile')}>
-
-          <Text style={styles.optionText}>Edit Profile</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.option}>
-          <Text style={styles.optionText}>Change Password</Text>
+        <View style={styles.userInfo}>
+          <Text style={styles.userName}>MARGOT ROBBIE</Text>
+          <Text style={styles.userEmail}>12345@1234.com</Text>
+        </View>
+        <TouchableOpacity style={styles.editButton}>
+          <Text style={styles.editText}>⚙️</Text>
         </TouchableOpacity>
       </View>
 
-      {/* Charging History */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Charging History</Text>
-        <TouchableOpacity style={styles.option}>
-          <Text style={styles.optionText}>View Past Sessions</Text>
-        </TouchableOpacity>
-      </View>
+      {/* Charging Fee and Balance Section */}
+        <View style={styles.cardSection}>
+          <View style={styles.cardItem}>
+            <Text style={styles.cardIcon}>⚡</Text>
+            <View style={styles.cardTextContainer}>
+              <Text style={styles.cardValue}>128.36</Text>
+              <Text style={styles.cardLabel}>Charging fee</Text>
+            </View>
+          </View>
 
-      {/* Payment Methods */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Payment Methods</Text>
-        <TouchableOpacity style={styles.option}>
-          <Text style={styles.optionText}>Manage Payment Methods</Text>
-        </TouchableOpacity>
-      </View>
+          <View style={styles.cardItem}>
+            <Text style={styles.cardIcon}>👛</Text>
+            <View style={styles.cardTextContainer}>
+              <Text style={styles.cardValue}>105.06</Text>
+              <Text style={styles.cardLabel}>Balance</Text>
+            </View>
+          </View>
+        </View>
 
-      {/* Logout Button */}
-      <TouchableOpacity style={styles.logoutButton}>
-        <Text style={styles.logoutText}>Log Out</Text>
-      </TouchableOpacity>
-    </ScrollView>
+      {/* Utilities Section */}
+      <View style={styles.utilitiesContainer}>
+        <Text style={styles.utilitiesTitle}>Utilities</Text>
+        <ScrollView style={styles.utilitiesScrollContainer}>
+          {[
+            { title: 'My collection', icon: '❤️' },
+            { title: 'Service sector', icon: '👥' },
+            { title: 'Historical records', icon: '⏰' },
+            { title: 'Activity Center', icon: '📢' },
+            { title: 'Fault reporting', icon: '📝' },
+            { title: 'Scroll Test', icon: '📝' },
+            { title: 'Scroll Test 2', icon: '📝' },
+            { title: 'Scroll Test 3', icon: '📝' },
+            { title: 'Scroll Test 4', icon: '📝' },
+            { title: 'Scroll Test 5', icon: '📝' },
+            { title: 'Scroll Test 6', icon: '📝' },
+            { title: 'Scroll Test 7', icon: '📝' },
+            { title: 'Scroll Test 8', icon: '📝' },
+            { title: 'Scroll Test 9', icon: '📝' },
+            { title: 'Scroll Test 10', icon: '📝' },
+            { title: 'Scroll Test 11', icon: '📝' },
+
+          ].map((item, index) => (
+            <TouchableOpacity key={index} style={styles.utilityItem}>
+              <Text style={styles.utilityIcon}>{item.icon}</Text>
+              <Text style={styles.utilityText}>{item.title}</Text>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+      </View>
+    </View>
+//       {/* Bottom Navigation Section */}
+//       <View style={styles.bottomNavigation}>
+//         {['🏠', '🚗', '⚡', '👤'].map((icon, index) => (
+//           <TouchableOpacity key={index} style={styles.navItem}>
+//             <Text style={styles.navIcon}>{icon}</Text>
+//           </TouchableOpacity>
+//         ))}
+//       </View>
+
   );
 };
 
+
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
-    padding: 20,
-    backgroundColor: '#f7f7f7',
+    flex: 1,
+//    backgroundColor: '#BBBCBC',  // Test Background of whole page
+    backgroundColor: '#eeeeee',  // White Background of whole page
   },
-  profileSection: {
+
+  header: {
+    flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 20,
+    marginHorizontal: 20,
+    marginTop: 16,
   },
+
   profileImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    marginBottom: 10,
+    width: 70,
+    height: 70,
+    borderRadius: 35
   },
+
+  userInfo: {
+    flex: 1,
+    marginLeft: 14, // Between profile image and text
+  },
+
   userName: {
-    fontSize: 22,
-    fontWeight: 'bold',
-  },
-  email: {
-    fontSize: 16,
-    color: '#666',
-  },
-  section: {
-    marginBottom: 20,
-  },
-  sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    marginBottom: 10,
+    color: '#292D32'
   },
-  option: {
-    backgroundColor: '#fff',
-    padding: 15,
-    borderRadius: 8,
-    marginBottom: 10,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
-    elevation: 3,
+
+  userEmail: {
+    fontSize: 12,
+    color: '#B59F9D'
   },
-  optionText: {
-    fontSize: 16,
+
+  editButton: {
+    paddingLeft: 20, // Increase size of button
+    paddingVertical: 20,
   },
-  logoutButton: {
-    backgroundColor: '#ff3b3b',
-    padding: 15,
-    borderRadius: 8,
-    alignItems: 'center',
+
+  editText: {
+    color: '#B59F9D',
+    fontSize: 12,
   },
-  logoutText: {
-    color: '#fff',
-    fontSize: 16,
+
+  cardSection: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginHorizontal: 20,
+    marginTop: 16,
+    gap: 15, // Gap between cards
+  },
+
+  cardItem: {
+    flex: 1,
+    backgroundColor: '#FFF', // White background color for each card
+    borderRadius: 18,
+    justifyContent: 'center',
+    flexDirection: 'row', // Align icon and text horizontally
+    alignItems: 'center', // Align icon and text vertically
+    gap: 20, // Gap between icon and text
+
+    shadowColor: "#02B335",
+    shadowOffset: {
+    	width: 3.5,
+    	height: 7,
+    },
+    shadowOpacity: 0.06,
+    shadowRadius: 14,
+
+  },
+
+  cardTextContainer: {
+//     gap: 0 ,
+  },
+
+  icon: {
+    fontSize: 40, // Icon size
+  },
+
+  cardValue: {
+    fontSize: 22,
     fontWeight: 'bold',
+    color: '#292D32',
+    paddingTop: 15,
   },
+
+  cardLabel: {
+    fontSize: 14,
+    color: '#B59F9D',
+    paddingBottom: 15,
+  },
+
+  utilitiesContainer: {
+    flex: 1,
+    marginHorizontal: 20,
+    marginTop: 20,
+  },
+
+  utilitiesTitle: {
+     fontSize: 16,
+     fontWeight: 'bold',
+     color: '#292D32'
+  },
+
+  utilitiesScrollContainer: {
+    flex: 1,
+    marginTop: 5,
+  },
+
+  utilityItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 5,
+    marginTop: 5, // Deadzone between items
+  },
+
+  utilityIcon: {
+    fontSize: 20,
+    marginRight: 8
+  },
+
+  utilityText: {
+    fontSize: 14,
+    color: '#292D32'
+  },
+//
+//   bottomNavigation: {
+//     flexDirection: 'row',
+//     justifyContent: 'space-around',
+//     padding: 16,
+//     backgroundColor: '#FFFFFF',
+//     borderTopWidth: 1,
+//     borderTopColor: '#E0E0E0'
+//   },
+//
+//   navItem: {
+//     alignItems: 'center'
+//   },
+//
+//   navIcon: {
+//     fontSize: 24,
+//     color: '#333'
+//   }
 });
 
-export default MeScreen;
+
+export default ProfileScreen;
