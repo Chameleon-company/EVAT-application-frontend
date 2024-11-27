@@ -44,9 +44,12 @@ const ChargingStationsScreen = () => {
         </Text>
         <View style={styles.connectorContainer}>
           {item.connectors.map((connector, index) => (
-            <Text key={index} style={styles.connectorText}>
-              <Icon name="bolt" size={14} color="#292D32" /> {connector.type} · {connector.power}
-            </Text>
+            <View key={index} style={styles.connectorRow}>
+              <Text style={styles.connectorText}>
+                <Icon name="bolt" size={14} color="#292D32" /> {connector.type} ·
+              </Text>
+              <Text style={styles.connectorPowerText}>{connector.power}</Text>
+            </View>
           ))}
         </View>
       </View>
@@ -62,7 +65,7 @@ const ChargingStationsScreen = () => {
           <TextInput placeholder="Search" style={styles.searchInput} />
         </View>
         <View style={styles.searchBarFilter}>
-          <Icon name="menu" size={24} color="#292D32" />
+          <Icon name="tune" size={24} color="#292D32" />
         </View>
       </View>
 
@@ -80,8 +83,8 @@ const ChargingStationsScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#BBBCBC',  // Test Background of whole page
-//     backgroundColor: '#F5F4F6',  // White Background of whole page
+//     backgroundColor: '#BBBCBC',  // Test Background of whole page
+    backgroundColor: '#F5F4F6',  // White Background of whole page
   },
 
   searchBarContainer: {
@@ -119,16 +122,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     padding: 15,
     borderRadius: 12,
-
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
   },
 
   listContent: {
     paddingHorizontal: 20,
     paddingVertical: 20,
   },
+
   stationContainer: {
     flexDirection: 'row',
     backgroundColor: '#fff',
@@ -139,49 +139,52 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 5,
   },
+
   stationImage: {
     width: 70,
     height: 70,
     borderRadius: 8,
     marginRight: 10,
   },
+
   stationInfo: {
     flex: 1,
   },
+
   stationName: {
     fontSize: 16,
     color: '#141415',
     fontWeight: 'bold',
     marginBottom: 5,
   },
+
   stationDistance: {
     fontSize: 14,
     color: '#5F5F63',
     marginBottom: 5,
   },
+
   connectorContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    marginTop: 0,
   },
+
+  connectorRow: {
+    flexDirection: "row", // Align items in a row
+    alignItems: "center", // Vertically center items in the row
+    marginBottom: 5, // Add spacing between rows
+  },
+
   connectorText: {
     fontSize: 14,
+    color: '#5F5F63',
+    marginRight: 5,
+  },
+
+  connectorPowerText: {
+    fontSize: 14,
     color: '#AFAFB1',
-    marginRight: 10,
   },
-  bottomNav: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    paddingVertical: 10,
-    borderTopWidth: 1,
-    borderTopColor: '#ddd',
-  },
-  activeNavButton: {
-    backgroundColor: '#32CD32',
-    padding: 10,
-    borderRadius: 20,
-  },
+
 });
 
 export default ChargingStationsScreen;
