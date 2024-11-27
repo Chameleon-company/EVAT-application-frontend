@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
+import { createUser } from '../apiService';
 
 interface SignUpFormValues {
   email: string;
@@ -12,9 +13,21 @@ const CreateAccountScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   const { control, handleSubmit, watch } = useForm<SignUpFormValues>();
   const password = watch('password');
 
-  const onSubmit = (data: SignUpFormValues) => {
-    console.log('Sign Up Data:', data);
-    // Handle account creation logic here
+  const onSubmit = async (data: SignUpFormValues) => {
+    try {
+      const response = await createUser(data.email, data.password);
+      console.log('Account Created:', response);
+      navigation.goBack(); // Navigate back to login screen on success
+    } catch (error: any) {
+      // Check if error.response exists
+      if (error.response) {
+        console.error('Sign Up Failed:', error.response.data);
+        alert(error.response.data.message || 'Error occurred during sign up');
+      } else {
+        console.error('Sign Up Error:', error.message);
+        alert('Network error or server is unreachable. Please try again later.');
+      }
+    }
   };
 
   return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
+import { loginUser } from '../apiService';
 
 interface LoginFormValues {
   email: string;
@@ -10,9 +11,14 @@ interface LoginFormValues {
 const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   const { control, handleSubmit } = useForm<LoginFormValues>();
 
-  const onSubmit = (data: LoginFormValues) => {
-    console.log('Login Data:', data);
-    // Handle login logic here
+  const onSubmit = async (data: LoginFormValues) => {
+    try {
+      const response = await loginUser(data.email, data.password);
+      console.log('Login Successful:', response);
+      // Navigate or store token
+    } catch (error) {
+      console.error('Login Failed:', error.response.data);
+    }
   };
 
   return (
