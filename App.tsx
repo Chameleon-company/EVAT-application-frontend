@@ -2,12 +2,16 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
+
 import FooterNavigation from './components/FooterNavigation';
 import MapScreen from './components/MapScreen';
 import TripPlannerScreen from './components/TripPlannerScreen';
 import SaveScreen from './components/SaveScreen';
 import MeScreen from './components/MeScreen';
 import EditProfileScreen from './components/EditProfileScreen';
+import LogInScreen from './components/LogInScreen';
+import CreateAccountScreen from './components/CreateAccountScreen';
+
 import 'react-native-get-random-values';
 
 const Stack = createNativeStackNavigator();
@@ -18,6 +22,8 @@ const routes = [
   {name: 'Save', component: SaveScreen},
   {name: 'Me', component: MeScreen},
   {name: 'EditProfile', component: EditProfileScreen},
+  {name: 'Login', component: LogInScreen},
+  {name: 'CreateAccount', component: CreateAccountScreen},
 ];
 
 const App = () => {
@@ -26,7 +32,7 @@ const App = () => {
       <View style={styles.container}>
         <View style={styles.navigatorContainer}>
           <Stack.Navigator
-            initialRouteName="Map"
+            initialRouteName="Login"
             screenOptions={{
               headerShown: false,
             }}>

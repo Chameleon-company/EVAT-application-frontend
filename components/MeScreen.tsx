@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const ProfileScreen = () => {
   return (
@@ -15,14 +16,14 @@ const ProfileScreen = () => {
           <Text style={styles.userEmail}>12345@1234.com</Text>
         </View>
         <TouchableOpacity style={styles.editButton}>
-          <Text style={styles.editText}>⚙️</Text>
+          <Icon name="settings" size={25} color="#B59F9D" />
         </TouchableOpacity>
       </View>
 
       {/* Charging Fee and Balance Section */}
         <View style={styles.cardSection}>
           <View style={styles.cardItem}>
-            <Text style={styles.cardIcon}>⚡</Text>
+            <Icon name="bolt" size={25} color="#00CB3A" />
             <View style={styles.cardTextContainer}>
               <Text style={styles.cardValue}>128.36</Text>
               <Text style={styles.cardLabel}>Charging fee</Text>
@@ -30,7 +31,7 @@ const ProfileScreen = () => {
           </View>
 
           <View style={styles.cardItem}>
-            <Text style={styles.cardIcon}>👛</Text>
+            <Icon name="wallet" size={25} color="#00B7CB" />
             <View style={styles.cardTextContainer}>
               <Text style={styles.cardValue}>105.06</Text>
               <Text style={styles.cardLabel}>Balance</Text>
@@ -43,41 +44,36 @@ const ProfileScreen = () => {
         <Text style={styles.utilitiesTitle}>Utilities</Text>
         <ScrollView style={styles.utilitiesScrollContainer}>
           {[
-            { title: 'My collection', icon: '❤️' },
-            { title: 'Service sector', icon: '👥' },
-            { title: 'Historical records', icon: '⏰' },
-            { title: 'Activity Center', icon: '📢' },
-            { title: 'Fault reporting', icon: '📝' },
-            { title: 'Scroll Test', icon: '📝' },
-            { title: 'Scroll Test 2', icon: '📝' },
-            { title: 'Scroll Test 3', icon: '📝' },
-            { title: 'Scroll Test 4', icon: '📝' },
-            { title: 'Scroll Test 5', icon: '📝' },
-            { title: 'Scroll Test 6', icon: '📝' },
-            { title: 'Scroll Test 7', icon: '📝' },
-            { title: 'Scroll Test 8', icon: '📝' },
-            { title: 'Scroll Test 9', icon: '📝' },
-            { title: 'Scroll Test 10', icon: '📝' },
-            { title: 'Scroll Test 11', icon: '📝' },
+            { title: 'My collection', icon: 'favorite-outline' },
+            { title: 'Service sector', icon: 'info-outline' },
+            { title: 'Historical records', icon: 'history' },
+            { title: 'Activity Center', icon: 'work-outline' },
+            { title: 'Fault reporting', icon: 'error-outline' },
+            { title: 'Scroll Test', icon: 'comment' },
+            { title: 'Scroll Test 2', icon: 'comment' },
+            { title: 'Scroll Test 3', icon: 'comment' },
+            { title: 'Scroll Test 4', icon: 'comment' },
+            { title: 'Scroll Test 5', icon: 'comment' },
+            { title: 'Scroll Test 6', icon: 'comment' },
+            { title: 'Scroll Test 7', icon: 'comment' },
+            { title: 'Scroll Test 8', icon: 'comment' },
+            { title: 'Scroll Test 9', icon: 'comment' },
+            { title: 'Scroll Test 10', icon: 'comment' },
+            { title: 'Scroll Test 11', icon: 'comment' },
+            { title: 'Scroll Test 12', icon: 'comment' },
+            { title: 'Scroll Test 13', icon: 'comment' },
 
           ].map((item, index) => (
             <TouchableOpacity key={index} style={styles.utilityItem}>
-              <Text style={styles.utilityIcon}>{item.icon}</Text>
+              <Icon name={item.icon} size={20} color="#292D32"/>
               <Text style={styles.utilityText}>{item.title}</Text>
             </TouchableOpacity>
           ))}
+        <View style={styles.bottomPadding}>
+        </View>
         </ScrollView>
       </View>
     </View>
-//       {/* Bottom Navigation Section */}
-//       <View style={styles.bottomNavigation}>
-//         {['🏠', '🚗', '⚡', '👤'].map((icon, index) => (
-//           <TouchableOpacity key={index} style={styles.navItem}>
-//             <Text style={styles.navIcon}>{icon}</Text>
-//           </TouchableOpacity>
-//         ))}
-//       </View>
-
   );
 };
 
@@ -159,10 +155,6 @@ const styles = StyleSheet.create({
 //     gap: 0 ,
   },
 
-  icon: {
-    fontSize: 40, // Icon size
-  },
-
   cardValue: {
     fontSize: 22,
     fontWeight: 'bold',
@@ -183,7 +175,7 @@ const styles = StyleSheet.create({
   },
 
   utilitiesTitle: {
-     fontSize: 16,
+     fontSize: 20,
      fontWeight: 'bold',
      color: '#292D32'
   },
@@ -196,37 +188,19 @@ const styles = StyleSheet.create({
   utilityItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 5,
-    marginTop: 5, // Deadzone between items
-  },
-
-  utilityIcon: {
-    fontSize: 20,
-    marginRight: 8
+    paddingVertical: 7,
+    marginTop: 4, // Deadzone between items
   },
 
   utilityText: {
-    fontSize: 14,
-    color: '#292D32'
+    fontSize: 18,
+    color: '#292D32',
+    marginLeft: 12,
   },
-//
-//   bottomNavigation: {
-//     flexDirection: 'row',
-//     justifyContent: 'space-around',
-//     padding: 16,
-//     backgroundColor: '#FFFFFF',
-//     borderTopWidth: 1,
-//     borderTopColor: '#E0E0E0'
-//   },
-//
-//   navItem: {
-//     alignItems: 'center'
-//   },
-//
-//   navIcon: {
-//     fontSize: 24,
-//     color: '#333'
-//   }
+
+  bottomPadding: {
+    height: 100 // So that you can select stuff without the nav bar being on top
+  },
 });
 
 
