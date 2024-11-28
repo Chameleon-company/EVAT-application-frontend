@@ -2,7 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const ProfileScreen = () => {
+
+const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {/* Profile Section */}
@@ -15,8 +16,8 @@ const ProfileScreen = () => {
           <Text style={styles.userName}>MARGOT ROBBIE</Text>
           <Text style={styles.userEmail}>12345@1234.com</Text>
         </View>
-        <TouchableOpacity style={styles.editButton}>
-          <Icon name="settings" size={25} color="#B59F9D" />
+        <TouchableOpacity style={styles.editButton} onPress={() => navigation.navigate('EditProfile')}>
+          <Icon name="settings" size={25} color="#292D32" />
         </TouchableOpacity>
       </View>
 
@@ -44,29 +45,30 @@ const ProfileScreen = () => {
         <Text style={styles.utilitiesTitle}>Utilities</Text>
         <ScrollView style={styles.utilitiesScrollContainer}>
           {[
-            { title: 'My collection', icon: 'favorite-outline' },
-            { title: 'Service sector', icon: 'info-outline' },
-            { title: 'Historical records', icon: 'history' },
-            { title: 'Activity Center', icon: 'work-outline' },
-            { title: 'Fault reporting', icon: 'error-outline' },
-            { title: 'Scroll Test', icon: 'comment' },
-            { title: 'Scroll Test 2', icon: 'comment' },
-            { title: 'Scroll Test 3', icon: 'comment' },
-            { title: 'Scroll Test 4', icon: 'comment' },
-            { title: 'Scroll Test 5', icon: 'comment' },
-            { title: 'Scroll Test 6', icon: 'comment' },
-            { title: 'Scroll Test 7', icon: 'comment' },
-            { title: 'Scroll Test 8', icon: 'comment' },
-            { title: 'Scroll Test 9', icon: 'comment' },
-            { title: 'Scroll Test 10', icon: 'comment' },
-            { title: 'Scroll Test 11', icon: 'comment' },
-            { title: 'Scroll Test 12', icon: 'comment' },
-            { title: 'Scroll Test 13', icon: 'comment' },
+            { title: 'Favourite stations', icon: 'favorite-outline', navigate: 'Save' },
+            { title: 'Service sector', icon: 'info-outline', navigate: 'Me' },
+            { title: 'Historical records', icon: 'history', navigate: 'Me' },
+            { title: 'Activity Center', icon: 'work-outline', navigate: 'Me' },
+            { title: 'Fault reporting', icon: 'error-outline', navigate: 'Me' },
+            { title: 'Scroll Test', icon: 'comment', navigate: 'Me' },
+            { title: 'Scroll Test 2', icon: 'comment', navigate: 'Me' },
+            { title: 'Scroll Test 3', icon: 'comment', navigate: 'Me' },
+            { title: 'Scroll Test 4', icon: 'comment', navigate: 'Me' },
+            { title: 'Scroll Test 5', icon: 'comment', navigate: 'Me' },
+            { title: 'Scroll Test 6', icon: 'comment', navigate: 'Me' },
+            { title: 'Scroll Test 7', icon: 'comment', navigate: 'Me' },
+            { title: 'Scroll Test 8', icon: 'comment', navigate: 'Me' },
+            { title: 'Scroll Test 9', icon: 'comment', navigate: 'Me' },
+            { title: 'Scroll Test 10', icon: 'comment', navigate: 'Me' },
+            { title: 'Scroll Test 11', icon: 'comment', navigate: 'Me' },
+            { title: 'Scroll Test 12', icon: 'comment', navigate: 'Me' },
+            { title: 'Scroll Test 13', icon: 'comment', navigate: 'Me' },
 
           ].map((item, index) => (
-            <TouchableOpacity key={index} style={styles.utilityItem}>
+            <TouchableOpacity key={index} style={styles.utilityItem} onPress={() => navigation.navigate(item.navigate)}>
               <Icon name={item.icon} size={20} color="#292D32"/>
               <Text style={styles.utilityText}>{item.title}</Text>
+
             </TouchableOpacity>
           ))}
         <View style={styles.bottomPadding}>
@@ -82,7 +84,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
 //    backgroundColor: '#BBBCBC',  // Test Background of whole page
-    backgroundColor: '#eeeeee',  // White Background of whole page
+    backgroundColor: '#F5F4F6',  // Normal Background of whole page
   },
 
   header: {
@@ -189,7 +191,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingVertical: 7,
-    marginTop: 4, // Deadzone between items
+    marginTop: 4, // Dead zone between items
   },
 
   utilityText: {
