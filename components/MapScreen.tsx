@@ -20,7 +20,7 @@ import AvailiableIcon from './icons/Availiable';
 import { useSharedValue, withSpring } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Availiable from './Availiable';
-import SearchComponent from './SearchComponent'; 
+import SearchComponent from './SearchComponent';
 
 const { width: w } = Dimensions.get('window');
 const menuItemWidth = w / 6;
