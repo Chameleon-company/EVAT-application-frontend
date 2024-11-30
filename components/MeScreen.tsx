@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-
 const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   return (
     <View style={styles.container}>
@@ -72,6 +71,7 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             </TouchableOpacity>
           ))}
         <View style={styles.bottomPadding} />
+
         </ScrollView>
       </View>
     </View>
@@ -96,7 +96,9 @@ const styles = StyleSheet.create({
   profileImage: {
     width: 70,
     height: 70,
+
     borderRadius: 35,
+
   },
 
   userInfo: {
@@ -107,12 +109,16 @@ const styles = StyleSheet.create({
   userName: {
     fontSize: 18,
     fontWeight: 'bold',
+
     color: '#292D32',
+
   },
 
   userEmail: {
     fontSize: 12,
+
     color: '#B59F9D',
+
   },
 
   editButton: {
@@ -142,10 +148,12 @@ const styles = StyleSheet.create({
     alignItems: 'center', // Align icon and text vertically
     gap: 20, // Gap between icon and text
 
+
     shadowColor: '#02B335',
     shadowOffset: {
       width: 3.5,
       height: 7,
+
     },
     shadowOpacity: 0.06,
     shadowRadius: 14,
@@ -179,6 +187,7 @@ const styles = StyleSheet.create({
      fontSize: 20,
      fontWeight: 'bold',
      color: '#292D32',
+
   },
 
   utilitiesScrollContainer: {
@@ -200,9 +209,11 @@ const styles = StyleSheet.create({
   },
 
   bottomPadding: {
+
     height: 100, // So that you can select stuff without the nav bar being on top
   },
 });
 
 
 export default ProfileScreen;
+

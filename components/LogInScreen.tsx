@@ -4,12 +4,15 @@ import { AxiosError } from 'axios';
 import { useForm, Controller } from 'react-hook-form';
 import { loginUser } from './apiService';
 
+
 interface LoginFormValues {
   email: string;
   password: string;
 }
 
+
 const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }): React.ReactElement => {
+
   const { control, handleSubmit } = useForm<LoginFormValues>();
 
   const onSubmit = async (data: LoginFormValues) => {
@@ -18,6 +21,7 @@ const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }): React.React
       console.log('Login Successful:', response);
       // Navigate or store token
     } catch (error) {
+
       if (error instanceof AxiosError && error.response && error.response.data) {
         console.error('Login Failed:', error.response.data);
       } else if (error instanceof Error) {
@@ -25,6 +29,7 @@ const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }): React.React
       } else {
         console.error('Login Failed:', error);
       }
+
     }
   };
 
@@ -85,4 +90,6 @@ const styles = StyleSheet.create({
   },
 });
 
+
 export default LoginScreen;
+

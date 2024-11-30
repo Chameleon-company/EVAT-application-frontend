@@ -25,6 +25,7 @@ const EditProfileScreen = () => {
     Alert.alert('Success', 'Your profile has been updated!');
   };
 
+
   const validateEmail = (emailAddress: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(emailAddress);
@@ -33,6 +34,7 @@ const EditProfileScreen = () => {
   const validatePhone = (phoneNumber: string) => {
     const phoneRegex = /^[0-9]{10}$/; // Assumes a 10-digit phone number
     return phoneRegex.test(phoneNumber);
+
   };
 
   return (

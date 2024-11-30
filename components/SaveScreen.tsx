@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const chargingStations = [
   {
+
     id: '1',
     name: 'EVgo Charging Station',
     distance: '1.2 km away from you',
@@ -27,6 +28,7 @@ const chargingStations = [
     distance: '1.2 km away from you',
     image: 'https://via.placeholder.com/70',
     connectors: [{ type: 'CHAdeMO', power: '100 kW' }],
+
   },
 ];
 
@@ -43,7 +45,9 @@ const ChargingStationsScreen = () => {
           <Icon name="location-on" size={14} color="#292D32" /> {item.distance}
         </Text>
         <View style={styles.connectorContainer}>
+
           {item.connectors.map((connector: { type: string; power: string }, index: number) => (
+
             <View key={index} style={styles.connectorRow}>
               <Text style={styles.connectorText}>
                 <Icon name="bolt" size={14} color="#292D32" /> {connector.type} ·
@@ -62,7 +66,9 @@ const ChargingStationsScreen = () => {
       <View style={styles.searchBarContainer}>
         <View style={styles.searchBar}>
           <Icon name="search" size={18} color="#CDCDCD" />
+
           <TextInput placeholder="Search" placeholderTextColor="#CDCDCD" style={styles.searchInput} />
+
         </View>
         <View style={styles.searchBarFilter}>
           <Icon name="tune" size={24} color="#292D32" />
@@ -168,8 +174,10 @@ const styles = StyleSheet.create({
   },
 
   connectorRow: {
+
     flexDirection: 'row', // Align items in a row
     alignItems: 'center', // Vertically center items in the row
+
     marginBottom: 5, // Add spacing between rows
   },
 
