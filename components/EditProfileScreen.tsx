@@ -25,14 +25,16 @@ const EditProfileScreen = () => {
     Alert.alert('Success', 'Your profile has been updated!');
   };
 
-  const validateEmail = (email) => {
+
+  const validateEmail = (emailAddress: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    return emailRegex.test(emailAddress);
   };
 
-  const validatePhone = (phone) => {
+  const validatePhone = (phoneNumber: string) => {
     const phoneRegex = /^[0-9]{10}$/; // Assumes a 10-digit phone number
-    return phoneRegex.test(phone);
+    return phoneRegex.test(phoneNumber);
+
   };
 
   return (

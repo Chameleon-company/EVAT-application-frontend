@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
-import { createUser } from '../apiService';
+import { createUser } from './apiService';
 
 interface SignUpFormValues {
   email: string;
@@ -22,10 +22,10 @@ const CreateAccountScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
       // Check if error.response exists
       if (error.response) {
         console.error('Sign Up Failed:', error.response.data);
-        alert(error.response.data.message || 'Error occurred during sign up');
+        Alert.alert('Sign Up Failed', error.response.data.message || 'Error occurred during sign up');
       } else {
         console.error('Sign Up Error:', error.message);
-        alert('Network error or server is unreachable. Please try again later.');
+        Alert.alert('Network Error', 'Network error or server is unreachable. Please try again later.');
       }
     }
   };
@@ -104,3 +104,4 @@ const styles = StyleSheet.create({
 });
 
 export default CreateAccountScreen;
+
