@@ -9,11 +9,10 @@ import {
   PermissionsAndroid,
   Platform,
 } from 'react-native';
-import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import MapViewDirections from 'react-native-maps-directions';
-import SearchComponent from './SearchComponent';
 import axios from 'axios';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -23,19 +22,12 @@ const TripPlannerScreen = () => {
   const [start, setStart] = useState<{ latitude: number; longitude: number } | null>(null);
   const [finish, setFinish] = useState<{ latitude: number; longitude: number } | null>(null);
 
-  // State for the map region
-  const [region, setRegion] = useState({
-    latitude: -37.8136,
-    longitude: 144.9631,
-    latitudeDelta: 0.0922,
-    longitudeDelta: 0.0421,
-  });
 
   // State for toggling details and storing calculated distance and ETA
   const [showDetails, setShowDetails] = useState(false);
   const [eta, setEta] = useState<string | null>(null);
   const [distance, setDistance] = useState<string | null>(null);
-
+  const [weather, setWeather] = useState<string | null>(null);
   // State for storing EV station data fetched from the server
   const [evStations, setEvStations] = useState<any[]>([]);
 
@@ -101,6 +93,7 @@ const TripPlannerScreen = () => {
               longitude,
             },
           }));
+        fetchWeather(latitude, longitude);
         },
         error => console.log('Error:', error),
         { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
@@ -110,11 +103,15 @@ const TripPlannerScreen = () => {
     // Fetch EV stations from the backend
     const fetchEVStations = async () => {
       try {
-        const response = await axios.get('http://54.206.74.135:5000/stations');  // API GOES HERE
+        const response = await axios.get('http://54.206.74.135:5000/stations');
         console.log('Fetched EV Stations:', response.data);
         setEvStations(response.data);
       } catch (error) {
-        console.error('Error fetching EV stations:', error.message, error.response);
+        if (axios.isAxiosError(error)) {
+          console.error('Error fetching EV stations:', error.message, error.response);
+        } else {
+          console.error('Error fetching EV stations:', error);
+        }
       }
     };
 
@@ -122,6 +119,23 @@ const TripPlannerScreen = () => {
     fetchEVStations();  // Fetch EV station data
   }, []);
 
+  // Fetch weather data based on latitude and longitude
+  const fetchWeather = async (latitude: number, longitude: number) => {
+    const apiKey = '944aca7968627b1147fc40c03091dee3';
+    try {
+      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`);
+      const data = await response.json();
+      console.log('Weather API response:', data);
+      if (data && data.weather && data.weather.length > 0 && data.main) {
+        setWeather(`${data.weather[0].description}, ${Math.round(data.main.temp - 273.15)}°C`);
+      } else {
+        setWeather('Weather data not available');
+      }
+    } catch (error) {
+      console.error('Error fetching weather data:', error);
+      setWeather('Error fetching weather data');
+    }
+  };
   // Handle marker press to update finish location and map center
   const handleMarkerPress = (station: any) => {
     setFinish({ latitude: station.latitude, longitude: station.longitude });
@@ -134,6 +148,7 @@ const TripPlannerScreen = () => {
       },
     }));
   };
+
 
   // Handle place selection from Google Places autocomplete
   const handlePlaceSelect = (
@@ -209,7 +224,6 @@ const TripPlannerScreen = () => {
       {/* Map View with region and user location */}
       <MapView
         style={styles.map}
-        region={region}
         showsTraffic
         showsUserLocation={true}
         initialRegion={{
@@ -303,6 +317,14 @@ const TripPlannerScreen = () => {
               <Icon name="access-time" size={20} color="black" />
               <Text style={styles.eta}>ETA: {eta}</Text>
             </View>
+            <View style={styles.infoRow}>
+                  <Icon name="wb-sunny" size={20} color="black" />
+                  <Text style={styles.weather}>
+                    Weather: {weather}
+                  </Text>
+                </View>
+
+
 
             {/* Navigate button to open Google Maps */}
             <TouchableOpacity style={styles.navigateButton} onPress={handleNavigate}>
@@ -373,6 +395,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginVertical: 4,
+  },
+
+  // Weather text styling
+  weather: {
+    fontSize: 18,
+    color: 'black',
+    marginLeft: 8,
   },
 
   // Button styles
