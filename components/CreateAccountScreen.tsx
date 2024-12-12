@@ -3,6 +3,7 @@ import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
 import { createUser } from './apiService';
 
+// Very basic create profile screen
 interface SignUpFormValues {
   email: string;
   password: string;

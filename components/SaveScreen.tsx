@@ -2,9 +2,10 @@ import React from 'react';
 import { View, Text, StyleSheet, FlatList, Image, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
+//  The following are just example stations and should be pulled from the database as stations
+//  that the user has saved and can easily set up a trip to the station
 const chargingStations = [
   {
-
     id: '1',
     name: 'EVgo Charging Station',
     distance: '1.2 km away from you',
@@ -37,7 +38,7 @@ const ChargingStationsScreen = () => {
     <View style={styles.stationContainer}>
       <Image
         style={styles.stationImage}
-        source={{ uri: item.image }} // Replace with profile image URL
+        source={{ uri: item.image }} // Replace with a station image or maybe a screenshot on a map
       />
       <View style={styles.stationInfo}>
         <Text style={styles.stationName}>{item.name}</Text>
@@ -45,9 +46,8 @@ const ChargingStationsScreen = () => {
           <Icon name="location-on" size={14} color="#292D32" /> {item.distance}
         </Text>
         <View style={styles.connectorContainer}>
-
           {item.connectors.map((connector: { type: string; power: string }, index: number) => (
-
+            // Should have a new row for each connector
             <View key={index} style={styles.connectorRow}>
               <Text style={styles.connectorText}>
                 <Icon name="bolt" size={14} color="#292D32" /> {connector.type} ·
@@ -62,14 +62,13 @@ const ChargingStationsScreen = () => {
 
   return (
     <View style={styles.container}>
-      {/* Search Bar */}
+      {/* Search Bar. Currently is not functional */}
       <View style={styles.searchBarContainer}>
         <View style={styles.searchBar}>
           <Icon name="search" size={18} color="#CDCDCD" />
-
           <TextInput placeholder="Search" placeholderTextColor="#CDCDCD" style={styles.searchInput} />
-
         </View>
+        {/* Filter Button. Currently is not functional */}
         <View style={styles.searchBarFilter}>
           <Icon name="tune" size={24} color="#292D32" />
         </View>
@@ -89,7 +88,7 @@ const ChargingStationsScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-//     backgroundColor: '#BBBCBC',  // Test Background of whole page
+//     backgroundColor: '#BBBCBC',  // Better contrast background of whole page
     backgroundColor: '#F5F4F6',  // White Background of whole page
   },
 
@@ -99,7 +98,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginTop: 20,
     gap: 10,
-
   },
 
   searchBar: {
@@ -174,11 +172,10 @@ const styles = StyleSheet.create({
   },
 
   connectorRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
 
-    flexDirection: 'row', // Align items in a row
-    alignItems: 'center', // Vertically center items in the row
-
-    marginBottom: 5, // Add spacing between rows
+    marginBottom: 5,
   },
 
   connectorText: {

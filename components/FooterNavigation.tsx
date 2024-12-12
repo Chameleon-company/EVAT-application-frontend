@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import {useNavigation} from '@react-navigation/native';
 import { BlurView } from "@react-native-community/blur";
 
+//   Nav bar at the bottom of the screen
 const FooterNavigation = () => {
   const navigation = useNavigation<any>();
 
@@ -24,6 +25,7 @@ const FooterNavigation = () => {
             <Icon name="login" size={25} color="#707070" />
           </TouchableOpacity>
 
+          {/* Different style for the middle in the nav bar */}
           <TouchableOpacity
             style={styles.navItemMain}
             onPress={() => navigation.navigate('TripPlanner')}>
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
   },
 
   navbar: {
-    backgroundColor: '#333', // Black with 80% opacity
+    backgroundColor: '#333', // Grey
     borderRadius: 100,
     width: '100%',
 
