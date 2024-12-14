@@ -103,7 +103,7 @@ const TripPlannerScreen = () => {
     // Fetch EV stations from the backend
     const fetchEVStations = async () => {
       try {
-        const response = await axios.get('http://54.206.74.135:5000/stations');
+        const response = await axios.get('http://54.206.74.135:5000/stations'); // SWAGGER API IS HERE
         console.log('Fetched EV Stations:', response.data);
         setEvStations(response.data);
       } catch (error) {

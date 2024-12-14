@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 
+// Very basic edit profile screen to connect to the profile screen, needs to connect to the API.
 const EditProfileScreen = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');

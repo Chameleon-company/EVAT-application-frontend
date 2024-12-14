@@ -5,16 +5,18 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      {/* Profile Section */}
+      {/* Profile Section. Just example data needs to be linked to user API */}
       <View style={styles.header}>
         <Image
           style={styles.profileImage}
-          source={{ uri: 'https://via.placeholder.com/70' }} // Replace with profile image URL
+          source={{ uri: 'https://via.placeholder.com/70' }} // Replace with user profile image URL
         />
         <View style={styles.userInfo}>
           <Text style={styles.userName}>MARGOT ROBBIE</Text>
           <Text style={styles.userEmail}>12345@1234.com</Text>
         </View>
+
+        {/* Edit Profile Button */}
         <TouchableOpacity style={styles.editButton} onPress={() => navigation.navigate('EditProfile')}>
           <Icon name="settings" size={25} color="#292D32" />
         </TouchableOpacity>
@@ -82,7 +84,7 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-//    backgroundColor: '#BBBCBC',  // Test Background of whole page
+//    backgroundColor: '#BBBCBC',  // High contrast Background of whole page
     backgroundColor: '#F5F4F6',  // Normal Background of whole page
   },
 
@@ -96,9 +98,7 @@ const styles = StyleSheet.create({
   profileImage: {
     width: 70,
     height: 70,
-
     borderRadius: 35,
-
   },
 
   userInfo: {
@@ -109,20 +109,16 @@ const styles = StyleSheet.create({
   userName: {
     fontSize: 18,
     fontWeight: 'bold',
-
     color: '#292D32',
-
   },
 
   userEmail: {
     fontSize: 12,
-
     color: '#B59F9D',
-
   },
 
   editButton: {
-    paddingLeft: 20, // Increase size of button
+    paddingLeft: 20, // Increase touch area of button
     paddingVertical: 20,
   },
 
@@ -144,8 +140,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF', // White background color for each card
     borderRadius: 18,
     justifyContent: 'center',
-    flexDirection: 'row', // Align icon and text horizontally
-    alignItems: 'center', // Align icon and text vertically
+    flexDirection: 'row',
+    alignItems: 'center',
     gap: 20, // Gap between icon and text
 
 
@@ -157,7 +153,6 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.06,
     shadowRadius: 14,
-
   },
 
   cardTextContainer: {
@@ -187,7 +182,6 @@ const styles = StyleSheet.create({
      fontSize: 20,
      fontWeight: 'bold',
      color: '#292D32',
-
   },
 
   utilitiesScrollContainer: {
@@ -209,8 +203,7 @@ const styles = StyleSheet.create({
   },
 
   bottomPadding: {
-
-    height: 100, // So that you can select stuff without the nav bar being on top
+    height: 100, // So that the nav bar doesnt hide some of the list
   },
 });
 
