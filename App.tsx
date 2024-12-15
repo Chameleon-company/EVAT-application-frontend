@@ -9,8 +9,11 @@ import TripPlannerScreen from './components/TripPlannerScreen';
 import SaveScreen from './components/SaveScreen';
 import MeScreen from './components/MeScreen';
 import EditProfileScreen from './components/EditProfileScreen';
-import LogInScreen from './components/LogInScreen';
-import CreateAccountScreen from './components/CreateAccountScreen';
+// import LogInScreen from './components/LogInScreen';
+// import CreateAccountScreen from './components/CreateAccountScreen';
+import LogInScreen from './components/Login/LogInScreen';
+import CreateAccountScreen from './components/Login/CreateAccount';
+import AddCardScreen from './components/Login/AddCard';
 
 import 'react-native-get-random-values';
 
@@ -24,6 +27,8 @@ const routes = [
   {name: 'EditProfile', component: EditProfileScreen},
   {name: 'Login', component: LogInScreen},
   {name: 'CreateAccount', component: CreateAccountScreen},
+  {name: 'AddCard', component: AddCardScreen},
+
 ];
 
 const App = () => {
