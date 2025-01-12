@@ -1,0 +1,92 @@
+_id,cost,charging_points,pay_at_location,membership_required,access_key_required,is_operational,latitude,longitude,operator,connection_type,current_type,charging_points_flag
+66d7e0a1cdf87e8b5d63d809,Unknown,1,Unknown,Unknown,Unknown,Unknown,-31.9362523,115.8715309,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d80a,Unknown,1,Unknown,Unknown,Unknown,Unknown,-32.9358797,151.6438477,ChargePoint,Type 1 (J1772),Unknown,1
+66d7e0a1cdf87e8b5d63d80b,Unknown,2,Unknown,Unknown,Unknown,Unknown,-41.218297,146.4125226,Unknown,Type 2 (Socket Only),Unknown,0
+66d7e0a1cdf87e8b5d63d80c,Unknown,8,Unknown,Unknown,Unknown,Unknown,-34.7554799,149.7209942,Tesla Supercharger,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d80d,Unknown,4,Unknown,Unknown,Unknown,Unknown,-37.8872284,145.0824905,"Tesla, Inc.",Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d80e,Unknown,2,Unknown,Unknown,Unknown,Unknown,-38.0270897,145.2116252,Unknown,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d80f,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.5753648,143.8664155,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d810,Unknown,2,Unknown,Unknown,Unknown,Unknown,-37.8042881,144.9719796,Museums Victoria,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d811,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.9054453,145.133609,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d812,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.6507196,145.5029836,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d813,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.9584508,145.0534948,ChargePoint,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d814,Unknown,1,Unknown,Unknown,Unknown,Unknown,-33.5212508,151.3749048,Tesla Motors,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d815,Unknown,1,Unknown,Unknown,Unknown,Unknown,-34.4075897,150.8812521,ChargePoint,Type 1 (J1772),Unknown,1
+66d7e0a1cdf87e8b5d63d816,Unknown,4,Unknown,Unknown,Unknown,Unknown,-33.8485098,138.6181952,Tesla Supercharger,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d817,Unknown,1,Unknown,Unknown,Unknown,Unknown,-25.197523,133.2007563,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d818,Unknown,8,Unknown,Unknown,Unknown,Unknown,-33.8829291,151.1946269,Tesla Supercharger,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d819,Unknown,1,Unknown,Unknown,Unknown,Unknown,-33.8682863,151.2063604,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d81a,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.7714237,144.9619656,Merri-bek City Council,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d81b,Unknown,2,Unknown,Unknown,Unknown,Unknown,-37.4438844,143.8905143,RACV,Type 1 (J1772),Unknown,0
+66d7e0a1cdf87e8b5d63d81c,Unknown,1,Unknown,Unknown,Unknown,Unknown,-33.9285142,151.186122,"Tesla, Inc.",Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d81d,Unknown,1,Unknown,Unknown,Unknown,Unknown,-33.9760165,150.8118548,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d81e,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.9505279,145.080672,ChargePoint,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d81f,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.9214395,145.1577067,ChargePoint,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d820,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8748303,145.165502,ChargePoint,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d821,Unknown,4,Unknown,Unknown,Unknown,Unknown,-38.1433232,144.3612324,Unknown,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d822,Unknown,1,Unknown,Unknown,Unknown,Unknown,-33.1375197,148.1726877,NRMA,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d823,Unknown,3,Unknown,Unknown,Unknown,Unknown,-33.5747389,115.8244911,RAC,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d824,Unknown,1,Unknown,Unknown,Unknown,Unknown,-34.775569,150.7008205,NRMA,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d825,Unknown,1,Unknown,Unknown,Unknown,Unknown,-41.4358155,147.1395575,Chargefox,"Type 2 (Socket Only), CHAdeMO",Unknown,1
+66d7e0a1cdf87e8b5d63d826,Unknown,1,Unknown,Unknown,Unknown,Unknown,-35.7084845,150.1752344,NRMA,CHAdeMO,Unknown,0
+66d7e0a1cdf87e8b5d63d827,Unknown,1,Unknown,Unknown,Unknown,Unknown,-33.3101932,151.420595,Tesla Supercharger,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d828,Unknown,3,Unknown,Unknown,Unknown,Unknown,-37.7237042,144.9209626,Unknown,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d829,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.7401175,145.0050847,Darebin City Council,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d82a,Unknown,4,Unknown,Unknown,Unknown,Unknown,-37.8160073,144.9597412,RACV,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d82b,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8163799,144.9547665,Alto Hotel,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d82c,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8132556,144.9559119,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d82d,Unknown,2,Unknown,Unknown,Unknown,Unknown,-37.8143461,144.9618065,Unknown,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d82e,Unknown,2,Unknown,Unknown,Unknown,Unknown,-37.81826,144.9639555,Unknown,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d82f,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8162175,144.9707936,GreenCo,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d830,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8153856,144.9700374,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d831,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8144864,144.9730784,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d832,Unknown,2,Unknown,Unknown,Unknown,Unknown,-37.8125596,144.9695662,Secure Parking,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d833,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.813368,144.9681379,QT,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d834,Unknown,1,Unknown,Unknown,Unknown,Unknown,-38.6490505,145.6858267,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d835,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.9430275,145.1184356,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d836,Unknown,2,Unknown,Unknown,Unknown,Unknown,-38.0870252,145.279579,Evie Networks,CHAdeMO,Unknown,0
+66d7e0a1cdf87e8b5d63d837,Unknown,2,Unknown,Unknown,Unknown,Unknown,-28.636313,153.553519,NRMA,CHAdeMO,Unknown,0
+66d7e0a1cdf87e8b5d63d838,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8188089,144.9426093,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d839,Unknown,2,Unknown,Unknown,Unknown,Unknown,-35.7175328,147.317755,NRMA,CHAdeMO,Unknown,0
+66d7e0a1cdf87e8b5d63d83a,Unknown,2,Unknown,Unknown,Unknown,Unknown,-33.7965055,151.1833566,EVLink,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d83b,Unknown,1,Unknown,Unknown,Unknown,Unknown,-36.0283814,146.8959075,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d83c,Unknown,2,Unknown,Unknown,Unknown,Unknown,-26.4170901,152.9114294,Yurika,"Type 2 (Socket Only), CHAdeMO",Unknown,0
+66d7e0a1cdf87e8b5d63d83d,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8098361,144.9692983,Unknown,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d83e,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8101221,144.970523,Secure Parking,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d83f,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8055148,144.9633222,Arrow on Swanston,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d840,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8022448,144.9669687,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d841,Unknown,2,Unknown,Unknown,Unknown,Unknown,-37.8044709,144.9733535,Melbourne Museum,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d842,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8014314,144.9427005,Jet Charge,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d843,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.812617,144.939222,The District Docklands,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d844,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8129804,144.9370084,The District Docklands,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d845,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8100036,144.9509974,Flagstaff City Inn,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d846,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8319526,144.9607646,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d847,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8322063,144.9692208,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d848,Unknown,1,Unknown,Unknown,Unknown,Unknown,-38.2998125,145.1705033,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d849,Unknown,1,Unknown,Unknown,Unknown,Unknown,-30.9786335,150.2519137,NRMA,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d84a,Unknown,1,Unknown,Unknown,Unknown,Unknown,-38.2661166,144.5220013,Geelong Regional Libraries,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d84b,Unknown,1,Unknown,Unknown,Unknown,Unknown,-38.184512,146.2375699,Chargefox,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d84c,Unknown,1,Unknown,Unknown,Unknown,Unknown,-34.18882,142.162711,NRMA,CHAdeMO,Unknown,1
+66d7e0a1cdf87e8b5d63d84d,Unknown,22,Unknown,Unknown,Unknown,Unknown,-32.9291638,151.7720103,Chargefox,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d84e,Unknown,22,Unknown,Unknown,Unknown,Unknown,-33.8763052,151.1778386,Chargefox,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d84f,Unknown,7,Unknown,Unknown,Unknown,Unknown,-32.9028042,151.6906686,Chargepoint,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d850,Unknown,22,Unknown,Unknown,Unknown,Unknown,-33.9138057,151.2391178,Chargefox,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d851,Unknown,1,Unknown,Unknown,Unknown,Unknown,-33.9053712,151.2129122,Chargefox,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d852,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.7644055,144.9222192,Tesla Supercharger,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d853,Unknown,1,Unknown,Unknown,Unknown,Unknown,-26.9182695,152.9964595,Evie Networks,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d854,Unknown,2,Unknown,Unknown,Unknown,Unknown,-27.4954744,153.0167803,Unknown,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d855,Unknown,3,Unknown,Unknown,Unknown,Unknown,-32.6539082,151.9625258,Chargefox,CHAdeMO,Unknown,0
+66d7e0a1cdf87e8b5d63d856,Unknown,2,Unknown,Unknown,Unknown,Unknown,-41.9293446,147.4945273,Evie Networks,CHAdeMO,Unknown,0
+66d7e0a1cdf87e8b5d63d857,Unknown,1,Unknown,Unknown,Unknown,Unknown,-27.4921779,153.0412292,Unknown,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d858,Unknown,1,Unknown,Unknown,Unknown,Unknown,-29.0106618,134.7543104,"Tesla, Inc.",Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d859,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.7189925,144.9614795,Chargefox,CHAdeMO,Unknown,0
+66d7e0a1cdf87e8b5d63d85a,Unknown,1,Unknown,Unknown,Unknown,Unknown,-36.0837898,146.9148011,NRMA,CHAdeMO,Unknown,1
+66d7e0a1cdf87e8b5d63d85b,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.5613256,143.8623024,Chargefox,CHAdeMO,Unknown,1
+66d7e0a1cdf87e8b5d63d85c,Unknown,1,Unknown,Unknown,Unknown,Unknown,-35.7099111,150.1774214,Evie Networks,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d85d,Unknown,4,Unknown,Unknown,Unknown,Unknown,-26.1881513,152.6612476,Tesla Supercharger,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d85e,Unknown,1,Unknown,Unknown,Unknown,Unknown,-32.7742468,151.2946203,NRMA,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d85f,Unknown,1,Unknown,Unknown,Unknown,Unknown,-33.9306373,151.2464722,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d860,Unknown,1,Unknown,Unknown,Unknown,Unknown,-37.8244076,144.9244765,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d861,Unknown,1,Unknown,Unknown,Unknown,Unknown,-32.1997712,152.5199677,Unknown,Unknown,Unknown,1
+66d7e0a1cdf87e8b5d63d862,Unknown,2,Unknown,Unknown,Unknown,Unknown,-37.7719979,144.9789845,Unknown,Unknown,Unknown,0
+66d7e0a1cdf87e8b5d63d863,Unknown,1,Unknown,Unknown,Unknown,Unknown,-34.6396148,143.5644882,NRMA,CHAdeMO,Unknown,1
