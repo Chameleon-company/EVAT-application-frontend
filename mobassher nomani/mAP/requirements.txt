@@ -1,0 +1,9 @@
+pandas
+geopandas
+folium
+streamlit
+streamlit-folium
+geopy
+openrouteservice
+geocoder
+python-dotenv
