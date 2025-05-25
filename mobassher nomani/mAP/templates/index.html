@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EV Charging Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body { margin: 0; display: flex; }
+    #sidebar {
+      width: 250px;
+      padding: 20px;
+      background: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+    #map {
+      height: 100vh;
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="sidebar">
+  <h3>Filter Stations</h3>
+  <label for="operator-search">Search Operator:</label><br>
+  <input type="text" id="operator-search" autocomplete="off" placeholder="Start typing..." style="width:100%;"><br>
+  <ul id="suggestions" style="list-style: none; padding-left: 0; margin-top: 5px;"></ul>
+</div>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="{{ url_for('static', filename='map.js') }}"></script>
+</body>
+</html>
